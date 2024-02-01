@@ -15,7 +15,7 @@ final categories = [
   Catergory(
       title: 'Bottines',
       image: 'assets/categories/bottines.png',
-      middleText: 'Visite'),
+      middleText: 'Découvrir'),
   Catergory(title: 'Bottines', image:'assets/categories/bottes.png'),
   Catergory(title: 'Mules/sabots', image:'assets/categories/mules.png'),
   Catergory(title: 'Ballerines', image: 'assets/categories/ballerines.png'),

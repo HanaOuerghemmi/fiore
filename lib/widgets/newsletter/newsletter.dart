@@ -161,7 +161,7 @@ print('mail sent ++++++++++++++++++++++++++++++++');
 }
 
 void sendEmail({required String body, required String subject }) async{
- final mailer = Mailer('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');
+ final mailer = Mailer('88b6b8153bb6a27c5e5f4f874ad31c56');
   final toAddress = Address('hanadeveloper.app@gmail.com');
   final fromAddress = Address('hana.ou123@yahoo.fr');
   final content = Content('text/plain', 'Hello World!');

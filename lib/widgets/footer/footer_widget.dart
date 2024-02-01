@@ -15,18 +15,17 @@ class FooterWidget extends StatelessWidget {
       vertical: 79,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            flex: 3,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+      //  children: [
+         // Flexible(
+           // flex: 3,
+           // child: Row(
+           //   mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SaltyLogo(),
                 20.verticalSpaceFromWidth,
                 Text(
-                  'Enjoy the touring \nwith Salty',
-                  style: inter16,
+                  'Enjoy the touring \nwith Fiore'
                 ),
                 40.verticalSpaceFromWidth,
                 Row(
@@ -49,52 +48,52 @@ class FooterWidget extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          Flexible(
-            flex: 6,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                FooterMenu(
-                  heading: 'Resources',
-                  menu: [
-                    'Download',
-                    'Help Center',
-                    'Guide Book',
-                    'App Directory',
-                  ],
-                ),
-                FooterMenu(
-                  heading: 'Travellers',
-                  menu: [
-                    'Why Travellers',
-                    'Enterprice',
-                    'Customer Stories',
-                    'Instagram post',
-                  ],
-                ),
-                FooterMenu(
-                  heading: 'Company',
-                  menu: [
-                    'Travelling',
-                    'About Locato',
-                    'Success',
-                    'Information',
-                  ],
-                ),
-                FooterMenu(
-                  heading: 'Get App',
-                  menu: [
-                    'App Store',
-                    'Google Play Store',
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+         // ),
+          // Flexible(
+          //   flex: 6,
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: const [
+          //       FooterMenu(
+          //         heading: 'Resources',
+          //         menu: [
+          //           'Download',
+          //           'Help Center',
+          //           'Guide Book',
+          //           'App Directory',
+          //         ],
+          //       ),
+          //       FooterMenu(
+          //         heading: 'Travellers',
+          //         menu: [
+          //           'Why Travellers',
+          //           'Enterprice',
+          //           'Customer Stories',
+          //           'Instagram post',
+          //         ],
+          //       ),
+          //       FooterMenu(
+          //         heading: 'Company',
+          //         menu: [
+          //           'Travelling',
+          //           'About Locato',
+          //           'Success',
+          //           'Information',
+          //         ],
+          //       ),
+          //       FooterMenu(
+          //         heading: 'Get App',
+          //         menu: [
+          //           'App Store',
+          //           'Google Play Store',
+          //         ],
+          //       ),
+          //     ],
+          //   ),
+          // ),
+      //   ],
+      // ),
     );
   }
 }
