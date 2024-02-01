@@ -35,7 +35,9 @@ class OurExperienceWidget extends StatelessWidget {
                     ),
                   ),
                   ClipOval(
-                    child: Assets.boy.image(
+                    child:
+                    Image.asset('assets/hand.png',
+                    // Assets.boy.image(
                       height: 562.sm,
                       width: 507.sm,
                       fit: BoxFit.cover,

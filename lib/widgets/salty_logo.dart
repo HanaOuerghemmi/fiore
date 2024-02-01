@@ -14,19 +14,22 @@ class SaltyLogo extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Assets.saltyLogo.image(
-          height: 35.sm,
-          width: 42.sm,
-        ),
+        Image.asset('assets/Logo.png',
+        height: 100.sm,
+         width: 100.sm,),
+        // Assets.saltyLogo.image(
+        //   height: 35.sm,
+        //   width: 42.sm,
+        // ),
         // 6.verticalSpace,
-        Text(
-          'Salty',
-          style: GoogleFonts.sen(
-            fontSize: 20.sp,
-            fontWeight: FontWeight.w700,
-            color: AppsColors.defaultTextColor,
-          ),
-        ),
+        // Text(
+        //   'Salty',
+        //   style: GoogleFonts.sen(
+        //     fontSize: 20.sp,
+        //     fontWeight: FontWeight.w700,
+        //     color: AppsColors.defaultTextColor,
+        //   ),
+        // ),
       ],
     );
   }

@@ -4,23 +4,23 @@ import 'package:travel_ui_landing_page/models/models.dart';
 import 'package:travel_ui_landing_page/utils/utils.dart';
 
 const navigation = [
-  'Home',
-  'About us',
-  'Destinations',
-  'Tours',
-  'Blog',
+  'Accueil',
+  'Categories',
+  'Aprops',
+  'Contact',
+ 
 ];
 
 final categories = [
   Catergory(
-      title: 'Beach',
-      image: Assets.categories.beach.path,
+      title: 'Bottines',
+      image: 'assets/categories/bottines.png',
       middleText: 'Visite'),
-  Catergory(title: 'Desert', image: Assets.categories.desert.path),
-  Catergory(title: 'Mountain', image: Assets.categories.mountain.path),
-  Catergory(title: 'Temple', image: Assets.categories.temple.path),
-  Catergory(title: 'Tower', image: Assets.categories.tower.path),
-  Catergory(title: 'Pyramid', image: Assets.categories.pyramid.path),
+  Catergory(title: 'Bottines', image:'assets/categories/bottes.png'),
+  Catergory(title: 'Mules/sabots', image:'assets/categories/mules.png'),
+  Catergory(title: 'Ballerines', image: 'assets/categories/ballerines.png'),
+  Catergory(title: 'Escarpins', image: 'assets/categories/escarpins.png'),
+  Catergory(title: 'Bqsket-femme', image: 'assets/categories/basket.png'),
 ];
 
 final destinations = [

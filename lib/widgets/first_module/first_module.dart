@@ -22,12 +22,19 @@ class FirstModule extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
-                    'Discover the Best Lovely Places',
-                    style: GoogleFonts.sen(
-                      fontSize: 86.sp,
-                      fontWeight: FontWeight.w700,
-                      color: AppsColors.defaultTextColor,
+                  Center(
+                    child: Text(
+                      'Découvrez notre collection de chaussures tendance pour chaque occasion.',
+                      textAlign: TextAlign.center,
+                      
+                      style: 
+                     
+                      GoogleFonts.sen(
+                        
+                        fontSize: 40.sp,
+                        fontWeight: FontWeight.w700,
+                        color: AppsColors.defaultTextColor,
+                      ),
                     ),
                   ),
                   26.verticalSpace,
