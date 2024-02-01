@@ -84,11 +84,13 @@ class OurExperienceWidget extends StatelessWidget {
                             ),
                           ),
                           8.verticalSpace,
-                          Text(
-                            'Destinations',
-                            style: TextStyles.inter(
-                              fontSize: 18.sp,
-                              color: AppsColors.defaultTextColor,
+                          FittedBox(
+                            child: Text(
+                              'Destinations',
+                              style: TextStyles.inter(
+                                fontSize: 18.sp,
+                                color: AppsColors.defaultTextColor,
+                              ),
                             ),
                           ),
                         ],
@@ -120,10 +122,12 @@ class OurExperienceWidget extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Text(
-                            'Customers',
-                            style: TextStyles.poppins(
-                              fontSize: 11.sp,
+                          FittedBox(
+                            child: Text(
+                              'Customers',
+                              style: TextStyles.poppins(
+                                fontSize: 11.sp,
+                              ),
                             ),
                           ),
                         ],
@@ -169,12 +173,14 @@ class OurExperienceWidget extends StatelessWidget {
                                     fontSize: 46.sp,
                                     color: AppsColors.searchIconBackground),
                               ),
-                              Text(
-                                'Succes Journey',
-                                style: TextStyles.inter(
-                                  fontSize: 21.sp,
-                                  color:
-                                      AppsColors.whiteCardDescriptionTextColor,
+                              FittedBox(
+                                child: Text(
+                                  'Succes Journey',
+                                  style: TextStyles.inter(
+                                    fontSize: 21.sp,
+                                    color:
+                                        AppsColors.whiteCardDescriptionTextColor,
+                                  ),
                                 ),
                               )
                             ],
@@ -193,12 +199,14 @@ class OurExperienceWidget extends StatelessWidget {
                                     fontSize: 46.sp,
                                     color: AppsColors.searchIconBackground),
                               ),
-                              Text(
-                                'Awards Winning',
-                                style: TextStyles.inter(
-                                  fontSize: 21.sp,
-                                  color:
-                                      AppsColors.whiteCardDescriptionTextColor,
+                              FittedBox(
+                                child: Text(
+                                  'Awards Winning',
+                                  style: TextStyles.inter(
+                                    fontSize: 21.sp,
+                                    color:
+                                        AppsColors.whiteCardDescriptionTextColor,
+                                  ),
                                 ),
                               )
                             ],
@@ -217,12 +225,14 @@ class OurExperienceWidget extends StatelessWidget {
                                     fontSize: 46.sp,
                                     color: AppsColors.searchIconBackground),
                               ),
-                              Text(
-                                'Years Of Experience',
-                                style: TextStyles.inter(
-                                  fontSize: 21.sp,
-                                  color:
-                                      AppsColors.whiteCardDescriptionTextColor,
+                              FittedBox(
+                                child: Text(
+                                  'Years Of Experience',
+                                  style: TextStyles.inter(
+                                    fontSize: 21.sp,
+                                    color:
+                                        AppsColors.whiteCardDescriptionTextColor,
+                                  ),
                                 ),
                               ),
                             ],
