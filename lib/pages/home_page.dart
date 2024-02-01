@@ -19,12 +19,7 @@ class HomePage extends StatelessWidget {
             58.verticalSpaceFromWidth,
             const OurExperienceWidget(),
             32.verticalSpaceFromWidth,
-            const FindPopularDestination(),
-            32.verticalSpaceFromWidth,
-            const TopDestinations(),
-            37.verticalSpaceFromWidth,
-            const CustomerFeedback(),
-            28.verticalSpaceFromWidth,
+           
             const NewsletterWidget(),
             15.verticalSpaceFromWidth,
             const FooterWidget()

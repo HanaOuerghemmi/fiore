@@ -17,7 +17,7 @@ class NewsletterWidget extends StatelessWidget {
         children: [
           Container(
             width: 1170.sm,
-            height: 358.sm,
+            height: 600.sm,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30).r,
               color: const Color(0xFFFFD482),
@@ -68,6 +68,51 @@ class NewsletterWidget extends StatelessWidget {
                           textAlignVertical: TextAlignVertical.center,
                         ),
                       ),
+                      
+                      
+
+
+                      
+                    ],
+                  ),
+                ),
+              ),
+          
+           16.verticalSpaceFromWidth,
+          //text mail part 
+ Container(
+                width: 450.sm,
+                height: 200.sm,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12).r,
+                  color: Colors.white,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 10,
+                  ).r,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          maxLength: 600,
+                          maxLines: 6,
+                          decoration: InputDecoration(
+                            
+                            hintText: 'Enter Your email address',
+                            border: InputBorder.none,
+                            // contentPadding: EdgeInsets.symmetric(
+                            //   horizontal: 30,
+                            //   vertical: 15,
+                            // ).w,
+                            hintStyle: inter16,
+                           
+                          ),
+                          textAlignVertical: TextAlignVertical.center,
+                        ),
+                      ),
                       Container(
                         width: 40.sm,
                         height: 40.sm,
@@ -81,6 +126,10 @@ class NewsletterWidget extends StatelessWidget {
                           height: 17.08.sm,
                         ),
                       ),
+                      // text part 
+
+
+                      
                     ],
                   ),
                 ),
