@@ -3,13 +3,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:travel_ui_landing_page/gen/assets.gen.dart';
 import 'package:travel_ui_landing_page/utils/utils.dart';
 
+import 'package:sendgrid_mailer/sendgrid_mailer.dart';
+
+
 class NewsletterWidget extends StatelessWidget {
   const NewsletterWidget({
     Key? key,
   }) : super(key: key);
 
   @override
+  
   Widget build(BuildContext context) {
+
     return DefaultPadding(
       vertical: 46,
       child: Stack(
@@ -120,10 +125,23 @@ class NewsletterWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12).r,
                           color: AppsColors.buttonColor,
                         ),
-                        child: Assets.icons.sendIcon.image(
-                          color: Colors.white,
-                          width: 15.83.sm,
-                          height: 17.08.sm,
+                        child: IconButton(
+                          onPressed: ()async{
+//                               final Email myFormEmail = Email(
+//   body: 'Email body', // This could be from the form field's value
+//   subject: 'Email subject', // Subject (maybe type of question, etc)
+//   recipients: ['hana.ou123@yahoo.fr'], // This is receiver (maybe your email)  // Attachments
+//   isHTML: false,
+// );
+//                             await FlutterEmailSender.send(myFormEmail);
+sendEmail(subject: 'subject mail1', body: 'body test mail 1');
+print('mail sent ++++++++++++++++++++++++++++++++');
+                          },
+                          icon: Assets.icons.sendIcon.image(
+                            color: Colors.white,
+                            width: 15.83.sm,
+                            height: 17.08.sm,
+                          ),
                         ),
                       ),
                       // text part 
@@ -140,4 +158,23 @@ class NewsletterWidget extends StatelessWidget {
       ),
     );
   }
+}
+
+void sendEmail({required String body, required String subject }) async{
+ final mailer = Mailer('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');
+  final toAddress = Address('hanadeveloper.app@gmail.com');
+  final fromAddress = Address('hana.ou123@yahoo.fr');
+  final content = Content('text/plain', 'Hello World!');
+  final subject = 'Hello Subject!';
+  
+
+  final personalization = Personalization([toAddress]);
+
+  final email =
+      Email([personalization], fromAddress, subject, content: [content]);
+  mailer.send(email).then((result) {
+    // ...
+  });
+
+print('+++++++++++++++++++++++mail+++++++++');
 }

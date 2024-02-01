@@ -4,7 +4,7 @@ import 'package:travel_ui_landing_page/utils/utils.dart';
 import 'package:travel_ui_landing_page/widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage();
 
   @override
   Widget build(BuildContext context) {
