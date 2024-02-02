@@ -102,7 +102,7 @@ class OurExperienceWidget extends StatelessWidget {
                     right: -20.sm,
                     child: RoundedWhiteCardWidget(
                       width: 175.sm,
-                      height: 100.sm,
+                      height: 110.sm,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -110,14 +110,16 @@ class OurExperienceWidget extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Assets.icons.cellularSignal.image(
-                                height: 30.sm,
-                                width: 30.sm,
+                                height: 20.sm,
+                                width: 20.sm,
                               ),
-                              Text(
-                                '5000+',
-                                style: TextStyles.poppins(
-                                  fontSize: 26.sp,
-                                  fontWeight: FontWeight.w600,
+                              FittedBox(
+                                child: Text(
+                                  '5000+',
+                                  style: TextStyles.poppins(
+                                    fontSize: 26.sp,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
                               ),
                             ],
@@ -126,7 +128,7 @@ class OurExperienceWidget extends StatelessWidget {
                             child: Text(
                               'Customers',
                               style: TextStyles.poppins(
-                                fontSize: 11.sp,
+                                fontSize: 9.sp,
                               ),
                             ),
                           ),
@@ -167,11 +169,13 @@ class OurExperienceWidget extends StatelessWidget {
                           padding: const EdgeInsets.all(26),
                           child: Column(
                             children: [
-                              Text(
-                                '12K+',
-                                style: TextStyles.inter(
-                                    fontSize: 46.sp,
-                                    color: AppsColors.searchIconBackground),
+                              FittedBox(
+                                child: Text(
+                                  '12K+',
+                                  style: TextStyles.inter(
+                                      fontSize: 46.sp,
+                                      color: AppsColors.searchIconBackground),
+                                ),
                               ),
                               FittedBox(
                                 child: Text(

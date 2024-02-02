@@ -27,15 +27,16 @@ class CategoriesWidget extends StatelessWidget {
               ),
             ),
             60.verticalSpace,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: categories
-                  .mapIndexed((category, index) => CategoryImageWidget(
-                        catergory: category,
-                        index: index,
-                      ))
-                  .toList(),
-            ),
+           
+             Row(
+               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+               children: categories
+                   .mapIndexed((category, index) => CategoryImageWidget(
+                         catergory: category,
+                         index: index,
+                       ))
+                   .toList(),
+             ),
           ],
         ),
       ),

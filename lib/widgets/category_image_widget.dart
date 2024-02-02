@@ -44,7 +44,7 @@ class CategoryImageWidget extends StatelessWidget {
           Text(
             catergory.title,
             style: TextStyles.inter(
-              fontSize: 26.sp,
+              fontSize: 22.sp,
               fontWeight: FontWeight.w500,
             ),
           ),

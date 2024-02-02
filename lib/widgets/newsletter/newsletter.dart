@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:travel_ui_landing_page/gen/assets.gen.dart';
 import 'package:travel_ui_landing_page/utils/utils.dart';
 
-import 'package:sendgrid_mailer/sendgrid_mailer.dart';
-
+//import 'package:sendgrid_mailer/sendgrid_mailer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class NewsletterWidget extends StatelessWidget {
   const NewsletterWidget({
@@ -14,7 +14,8 @@ class NewsletterWidget extends StatelessWidget {
   @override
   
   Widget build(BuildContext context) {
-
+  final TextEditingController subjectController = TextEditingController();
+ final TextEditingController bodyController = TextEditingController();
     return DefaultPadding(
       vertical: 46,
       child: Stack(
@@ -61,8 +62,9 @@ class NewsletterWidget extends StatelessWidget {
                     children: [
                       Expanded(
                         child: TextField(
+                          controller: subjectController,
                           decoration: InputDecoration(
-                            hintText: 'Enter Your email address',
+                            hintText: 'Enter Your subject',
                             border: InputBorder.none,
                             // contentPadding: EdgeInsets.symmetric(
                             //   horizontal: 30,
@@ -102,11 +104,12 @@ class NewsletterWidget extends StatelessWidget {
                     children: [
                       Expanded(
                         child: TextField(
+                          controller: bodyController,
                           maxLength: 600,
                           maxLines: 6,
                           decoration: InputDecoration(
                             
-                            hintText: 'Enter Your email address',
+                            hintText: 'Enter Your message',
                             border: InputBorder.none,
                             // contentPadding: EdgeInsets.symmetric(
                             //   horizontal: 30,
@@ -126,17 +129,13 @@ class NewsletterWidget extends StatelessWidget {
                           color: AppsColors.buttonColor,
                         ),
                         child: IconButton(
-                          onPressed: ()async{
-//                               final Email myFormEmail = Email(
-//   body: 'Email body', // This could be from the form field's value
-//   subject: 'Email subject', // Subject (maybe type of question, etc)
-//   recipients: ['hana.ou123@yahoo.fr'], // This is receiver (maybe your email)  // Attachments
-//   isHTML: false,
-// );
-//                             await FlutterEmailSender.send(myFormEmail);
-sendEmail(subject: 'subject mail1', body: 'body test mail 1');
-print('mail sent ++++++++++++++++++++++++++++++++');
-                          },
+                          onPressed: (){
+
+                            sendEmail(
+                              subject: subjectController.text,
+                              body: bodyController.text);
+                            },
+//                           
                           icon: Assets.icons.sendIcon.image(
                             color: Colors.white,
                             width: 15.83.sm,
@@ -161,20 +160,30 @@ print('mail sent ++++++++++++++++++++++++++++++++');
 }
 
 void sendEmail({required String body, required String subject }) async{
- final mailer = Mailer('88b6b8153bb6a27c5e5f4f874ad31c56');
-  final toAddress = Address('hanadeveloper.app@gmail.com');
-  final fromAddress = Address('hana.ou123@yahoo.fr');
-  final content = Content('text/plain', 'Hello World!');
-  final subject = 'Hello Subject!';
+//  final mailer = Mailer('88b6b8153bb6a27c5e5f4f874ad31c56');
+//   final toAddress = Address('hanadeveloper.app@gmail.com');
+//   final fromAddress = Address('hana.ou123@yahoo.fr');
+//   final content = Content('text/plain', 'Hello World!');
+//   final subject = 'Hello Subject!';
   
 
-  final personalization = Personalization([toAddress]);
+//   final personalization = Personalization([toAddress]);
 
-  final email =
-      Email([personalization], fromAddress, subject, content: [content]);
-  mailer.send(email).then((result) {
-    // ...
-  });
+//   final email =
+//       Email([personalization], fromAddress, subject, content: [content]);
+//   mailer.send(email).then((result) {
+//     // ...
+//   });
+    final Uri emailLaunchUri = Uri(
+        scheme: 'mailto',
+        path: 'hana.ou123@yahoo.fr',
+        queryParameters: {
+            'subject': subject,
+            'body':  Uri.encodeComponent(body)
+        },
+    );
+    launchUrl(emailLaunchUri);
+
 
 print('+++++++++++++++++++++++mail+++++++++');
 }
